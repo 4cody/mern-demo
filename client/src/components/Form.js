@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import "../App.css";
+
 function Form() {
   const [formData, setFormData] = useState("");
 
   async function handleSubmit(e) {
-    e.preventDefault(); // stops default reloading behaviour
-    const response = await axios.post("/post-text", {
+    e.preventDefault();
+    await axios.post("/post-text", {
       text: formData,
     });
-
-    console.log(response);
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="body">Body</label>
+    <form onSubmit={handleSubmit} className="Form">
       <textarea
         onChange={(e) => {
           setFormData(e.target.value);
