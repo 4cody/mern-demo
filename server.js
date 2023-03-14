@@ -6,7 +6,7 @@ const Comment = require("./model");
 var app = express();
 
 //  This will create a db called mern-demo when you post a comment
-const db = "mongodb://localhost:27017/mern-demo";
+const db = "mongodb://127.0.0.1:27017/mern-demo";
 
 // DB Connection
 const connectDB = async () => {
