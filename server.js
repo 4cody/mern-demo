@@ -28,7 +28,7 @@ const connectDB = async () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//  Cors
+//  Cors -- WhiteList all NOT FOR PRODUCTION
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
